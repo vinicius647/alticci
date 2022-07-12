@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Alticci Sequence</title>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+          integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+
+    <script>
+        function doRequest() {
+            var url = window.location.protocol + "//" + window.location.host + "/alticci/";
+            var xhttp = new XMLHttpRequest();
+            xhttp.open("GET", url + document.getElementById("inputNumber").value, false);
+
+            xhttp.send();
+
+            document.getElementById("result").innerHTML = "<b>Result=" + xhttp.responseText + "</b>";
+        }
+    </script>
+
+</head>
+<body>
+
+
+<div class="card">
+    <div class="card-body">
+        <h1>Alticci Sequence</h1>
+        <form class="row g-3" id="form">
+            <div class="col-auto">
+                <input type="number" class="form-control" id="inputNumber" placeholder="Type a number" min="0">
+            </div>
+            <div class="col-auto">
+                <button type="button" class="btn btn-primary mb-3" onclick="doRequest()">Calculate</button>
+            </div>
+        </form>
+        <div class="col-auto row">
+            <label id="result"></label>
+        </div>
+    </div>
+</div>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+        crossorigin="anonymous"></script>
+
+</body>
+</html>

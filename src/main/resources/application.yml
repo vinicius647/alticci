@@ -1,0 +1,13 @@
+server:
+  port: 8292
+spring:
+  application:
+    name: alticci-sequence
+  jackson:
+    date-format: yyyy-MM-dd HH:mm:ss
+    deserialization:
+      FAIL_ON_UNKNOWN_PROPERTIES: false
+springdoc:
+  show-actuator: true
+  api-docs:
+    path: v1/api-docs
